@@ -37,5 +37,5 @@ speaklater==1.3
 uritemplate==0.6
 Werkzeug==0.9.6
 WTForms==1.0.5
-python-rake=1.0.6
-tweepy=3.5.0
+python-rake==1.0.6
+tweepy==3.5.0
