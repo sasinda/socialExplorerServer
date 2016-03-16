@@ -41,8 +41,8 @@ app.testing = DEBUG  # WARNING: this will disable login_manager decorators
 # Load settings from separate modules
 # -------------------------------------------------------------
 
-import website.settings.base
-app.config.from_object(website.settings.base)
+import website.settings
+app.config.from_object(website.settings)
 
 # config = "website.settings.production" if PRODUCTION else "website.settings.local"
 import importlib
@@ -71,7 +71,8 @@ auth.models.init_app(app)
 import auth.views
 app.register_blueprint(auth.views.app)
 
-
+import explorer.views
+app.register_blueprint(explorer.views.app)
 # -------------------------------------------------------------
 # Development server setup
 # -------------------------------------------------------------

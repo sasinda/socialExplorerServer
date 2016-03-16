@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block main %}
+
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h3 class="text-center">Hi {{ current_user.cn }}</h3>
+
+                <h1 class="text-center">Users List</h1>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-6 col-lg-offset-3">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Provider</th>
+                    <th>Name</th>
+                    <th>Profile ID</th>
+                    <th>Profile URL</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in social_users %}
+                    <tr>
+                        <td>{{ user.provider }} </td>
+                        <td>{{ user.cn }}</td>
+                        <td>{{ user.profile_id }}</td>
+                        <td>{{ user.profile_url }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="col-md-6 col-lg-offset-3">
+            <form class="form-horizontal" action="{{ url_for('explorer.analyse', provider='') }}">
+                <fieldset>
+                    <!-- Form Name -->
+                    <legend>Generate Analysis</legend>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="provider">Select Provider</label>
+
+                        <div class="col-md-4">
+                            <select id="provider" name="provider" class="form-control">
+                                <option value="Facebook">Facebook</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="Instagram">Instagram</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="profile_id">Profile ID 1</label>
+
+                        <div class="col-md-4">
+                            <input id="profile_id_1" name="profile_id_1" type="text"
+                                   placeholder="profile id copy from user list table" class="form-control input-md"
+                                   required=""
+                                    value="1289705247709889">
+                            {#                            <span class="help-block">help</span>#}
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="profile_id">Profile ID 2</label>
+
+                        <div class="col-md-4">
+                            <input id="profile_id_2" name="profile_id_2" type="text"
+                                   placeholder="profile id copy from user list table" class="form-control input-md"
+                                    value="1289705247709889">
+                            <span class="help-block">input another user if you are comparing</span>
+                        </div>
+                    </div>
+
+                    <!-- Multiple Radios -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="radios">Analysis Type</label>
+
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label for="radios-0">
+                                    <input type="radio" name="analysis" id="radios-0" value="1" checked="checked">
+                                    Similarity
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="radios-1">
+                                    <input type="radio" name="analysis" id="radios-1" value="2">
+                                    Activity Summery
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <div class="col-md-4 col-md-offset-8">
+                            <button type="submit" class="btn btn-primary">Analyse
+                            </button>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

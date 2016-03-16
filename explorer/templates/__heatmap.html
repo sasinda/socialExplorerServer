@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML5 Skeleton</title>
+<meta charset="utf-8">
+	<script src="plotly-latest.min.js"></script>
+</head>
+<body>
+	<div id="tester" style="width:800px;height:600px;"></div>
+</body>
+
+<script>
+	var data = [
+	  {
+	  	x: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+	  	y: ['2016/01', '2016/02', '2016/03', '2015/11', '2015/10', '2015/12'],
+	    z: [[81.0, 61.5, 50.0, 49.0, 49.0, 48.0, 36.0, 36.0, 36.0, 36.0], [171.0, 108.0, 79.0, 64.0, 60.0, 54.0, 49.0, 36.0, 36.0, 36.0], [115.0, 77.5, 76.0, 64.0, 49.0, 49.0, 49.0, 40.0, 36.0, 36.0], [124.0, 82.5, 66.0, 64.0, 56.0, 49.0, 49.0, 40.0, 40.0, 36.0], [225.5, 144.0, 129.5, 121.0, 115.5, 100.0, 81.0, 81.0, 72.0, 64.0], [132.5, 92.0, 81.0, 64.0, 64.0, 64.0, 63.666666666666664, 50.66666666666667, 49.0, 49.0]],
+	    text: [['#votetrump #supertuesday florida illinois missouri north carolina ohio  #trumptrain', 'make america great', 'cadillac world golf championship @trumpdoral', 'lightweight senator marco rubio features trump univ', 'suggest wapo reporter ben terris misidentifies lewandowski', 'lightweight senator marco rubio', 'pos wsj liar fantasy pundit @marykissel', '@realdonaldtrump @gregens21 @bertshad @foxnews @megynkelly hayes', 'expose dishonest lightweight senator marco rubio', 'donald trump press conference #trumptrain #trump2016'], ['make america great', 'south carolina', 'ted cruz', 'trump 28% cruz 15% rubio 14% kasich 13% bush 8% carson 6% simon poll/siu', '#makeamericagreatagain #trump2016', 'make america safe', 'ted cruz falsely suggested marco rubio mocked', '@realdonaldtrump @clewandowski_ @danscavino @michaelcohen212 @katrinapierson @defendingtheusa', '#votetrumpmi trump 35% kasich 17% cruz 12% rubio 12% carson 9%', '@realdonaldtrump @morg25016893 @eventbrite yup 200 polish immigrants'], ['make america great', 'mitchell fox2 michigan poll finds trump holds 3-1 lead', 'ted cruz', 'highly respected constitutional law professor mary brigid mcmanamon', '@nbcnews wsj poll shows @realdonaldtrump pulling ahead', 'ted cruz supported liberal justice john roberts', '@ruthmarcus @washingtonpost bashing distinguished women journalists won', '#makeamericagreatagain #trump2016', 'watching donald trump rally thursday night', '#trump2016 #iacaucus finder'], ['make america great', '@realdonaldtrump', 'donald trump', 'men / women / millennials / politically saavy', '#makeamericagreatagain #trump2016', 'pollster trend  national gop average 223 national polls', '@realdonaldtrump @kimguilfoyle @foxnews long live donald trump', 'trump', '#trump2016 #makeamericagreatagain', 'legendary barbara walters interviews melania trump'], ['make america great', 'hampshire  trump 38% carson 12% bush 8%  south carolina trump 40% carson 23% cruz 8% iowa trump 27% carson 27%', '@realdonaldtrump', '@collegestump @cnn @foxnews @drudge_report @blackrepublican fyi @batchelorshow @larry_kudlow #trump2016 appeal grows', 'donald trump', '@mariclaire81 @realdonaldtrump jeb supports open borders-common core- visa h-ib visa', '10/6/15 morning poll trump +18% trump 31 carson 13 rubio 10 bush 7 fiorina 6', 'black lives matter protesters totally disrupt hillary clinton event', 'donald trump hands \xa1\xaefox news sunday\xa1\xaf', 'abc news/washington post  trump 32  carson 22  rubio 10  bush 7  wow'], ['make america great', '#makeamericagreatagain #trump2016', '@chucktodd apologize hypocrite jersey city 9/11 celebration report  #makeamericagreatagain', '@foxnews @howardkurtz @mediabuzzfnc start backing @realdonaldtrump real change', 'ufc president dana white endorses donald trump [video]', 'highly respected golf odyssey- awarded @trumpdoral blue monster', 'donald trump', 'trump', '@cnn @lindseygrahamsc @realdonaldtrump donald represents real americans', '@realdonaldtrump']],
+	    type: 'heatmap'
+	  }
+	];
+
+	Plotly.newPlot('tester', data);
+</script>
+

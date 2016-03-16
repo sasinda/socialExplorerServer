@@ -132,6 +132,16 @@ class SocialConnection(db.Document):
 def load_user(user_id):
     return User.objects(_id=user_id)
 
+def load_social_by_profile_id(profile_id):
+    return SocialConnection.objects(profile_id=profile_id)
+
+def list_users():
+    users = User.objects()
+    return users
+
+def list_social_users():
+    return SocialConnection.objects()
+
 
 def send_mail(msg):
     logging.debug("msg: %s" % msg)
@@ -159,5 +169,6 @@ def init_app(app):
 
     @app.before_first_request
     def before_first_request():
-        for m in [User, Role, SocialConnection]:
-            m.drop_collection()
+         for m in [User, Role, SocialConnection]:
+             print m
+             # m.drop_collection()

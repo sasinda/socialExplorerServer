@@ -10,7 +10,7 @@
             <div class="col-md-3  col-md-offset-3">
                 <img src="{{ current_user.gravatar }}?s=300&d=retro" alt="" class="img-circle img-responsive mg-btm">
             </div>
-            <div class="col-md-3">
+                <div class="col-md-3">
                 <dl>
                     <dt>Email</dt>
                     <dd>{{ current_user.email }}</dd>
@@ -19,7 +19,13 @@
                     <dt>Last name</dt>
                     <dd>{{ current_user.last_name }}</dd>
                 </dl>
-                <a class="btn btn-primary btn-lg" href="{{ url_for_security('logout') }}">Logout</a>
+                <a class="btn btn-success btn-lg" href="{{ url_for_security('logout') }}">Logout</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3  col-md-offset-3">
+                <a class="btn btn-primary btn-lg align-center" href="/dashboard">Explore Social Data</a>
             </div>
         </div>
         {% with connections=current_user.social_connections() %}

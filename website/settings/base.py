@@ -3,7 +3,7 @@
 
 import logging
 import os
-
+# DEBUG=  True
 SRC_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 # ============================================================================
@@ -75,9 +75,9 @@ SOCIAL_BLUEPRINT = {
     # https://apps.twitter.com/app/new
     "flask_social_blueprint.providers.Twitter": {
         # Your access token from API Keys tab
-        'consumer_key': 'bkp…',
+        'consumer_key': 'D7ZIV69VbyVZKXHyMKnVYB2q3',
         # access token secret
-        'consumer_secret': 'pHUx…'
+        'consumer_secret': 'AQimKid11GDXauW3BWKw0T8xAj415A5Uk5x6WPf5DFDyFpqV2l'
     },
     # https://console.developers.google.com/project
     "flask_social_blueprint.providers.Google": {

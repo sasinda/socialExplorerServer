@@ -53,7 +53,7 @@ class Twitter(BaseProvider):
             'provider': self.name,
             'profile_id': str(profile.id),
             'username': profile.screen_name,
-            "email": None,  # twitter does not provide email
+            "email": name_split[0]+ '@twitter.com',  # twitter does not provide email
             'access_token': raw_data['oauth_token'],
             'secret': raw_data['oauth_token_secret'],
             "first_name": name_split[0],
