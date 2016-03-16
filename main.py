@@ -60,6 +60,7 @@ import importlib
 
 from website.database import db
 db.init_app(app)
+db.connection.heroku_rdmwpjrp.authenticate('root', 'admin')
 
 # Enable i18n and l10n
 from flask_babel import Babel

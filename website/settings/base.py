@@ -31,8 +31,8 @@ MONGODB_SETTINGS = {
     'db': 'heroku_rdmwpjrp',
     'host': 'mongodb://ds015919.mlab.com:15919/heroku_rdmwpjrp',
     # 'port': 15919,
-    'username': 'heroku_rdmwpjrp',
-    'password': 'admin123',
+    'username': 'root',
+    'password': 'admin',
     'tz_aware': True,
 }
 
