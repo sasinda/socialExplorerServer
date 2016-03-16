@@ -17,12 +17,22 @@ FLASH_MESSAGES = True
 # Flask-MongoEngine
 # http://flask-mongoengine.readthedocs.org/en/latest/#configuration
 
+
+# MONGODB_SETTINGS = {
+#     'db': 'flask_social_blueprint',
+#     'host': '127.0.0.1',
+#     'port': 27017,
+#     'username': None,
+#     'password': None,
+#     'tz_aware': True,
+# }
+
 MONGODB_SETTINGS = {
     'db': 'heroku_rdmwpjrp',
-    'host': 'ds015919.mlab.com',
-    'port': 15919,
-    'username': 'root',
-    'password': 'admin',
+    'host': 'mongodb://ds015919.mlab.com:15919/heroku_rdmwpjrp',
+    # 'port': 15919,
+    'username': 'heroku_rdmwpjrp',
+    'password': 'admin123',
     'tz_aware': True,
 }
 
