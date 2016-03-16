@@ -8,6 +8,7 @@ from flask_security.utils import do_flash
 import auth.models as models
 import tw_hot_topic as tw
 import insta as insta
+import facebooksimilarity as fbs
 
 app = Blueprint("explorer", __name__, template_folder="templates")
 
@@ -30,13 +31,23 @@ def analyse():
 
     #Analysis switch
     if provider=='Facebook':
-        template='/facebook.html'
-        return render_template(template)
+        return renderFacebook(user1)
     elif provider=='Instagram':
         return render_template('/instagram.html', score=0.44)
     else:
         return renderTwitter(user1)
 
+def renderFacebook(user):
+    json=None
+    error=None
+    template='/facebook.html'
+    if(user.provider!='Facebook'):
+         error="Use a Facebook users profile id not "+ user.provider
+         do_flash(_(error), "error")
+    else:
+        token=user.access_token.encode('ascii','ignore')
+        json=fbs.getPosts('me', token)
+    return render_template(template, data=json, error=error)
 
 def renderTwitter(user):
     jason=None
