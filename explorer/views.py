@@ -19,7 +19,7 @@ def dashboard():
 
 @app.route("/analyse")
 def analyse():
-    analType= request.args['analysis']
+    # analType= request.args['analysis']
     provider= request.args['provider']
     profile_id1= request.args['profile_id_1']
     profile_id2= request.args['profile_id_1']
