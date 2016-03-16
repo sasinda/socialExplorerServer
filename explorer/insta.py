@@ -1,7 +1,5 @@
 __author__ = 'pangjac'
 
-from time import sleep
-from instagram.client import InstagramAPI
 from collections import Counter
 import urllib2, cookielib
 import json

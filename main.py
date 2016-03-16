@@ -93,6 +93,6 @@ if __name__ == "__main__":
     # for local vagrant based development
     logging.warn("We're binding to all your ip addresses. Don't forget to map `local.socialexplorer.com` to one of them")
     logging.warn("For more information see http://bit.ly/1xKtf8j")
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5055))
     app.run(host='0.0.0.0', port=port)
     # app.run(host="0.0.0.0", port=5055)
