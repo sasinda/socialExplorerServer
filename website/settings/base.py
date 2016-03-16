@@ -18,11 +18,11 @@ FLASH_MESSAGES = True
 # http://flask-mongoengine.readthedocs.org/en/latest/#configuration
 
 MONGODB_SETTINGS = {
-    'db': 'flask_social_blueprint',
-    'host': '127.0.0.1',
-    'port': 27017,
-    'username': None,
-    'password': None,
+    'db': 'heroku_rdmwpjrp',
+    'host': 'ds015919.mlab.com',
+    'port': 15919,
+    'username': 'root',
+    'password': 'admin',
     'tz_aware': True,
 }
 
